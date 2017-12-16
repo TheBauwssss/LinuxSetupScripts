@@ -15,10 +15,11 @@ chmod +x install_firewall.sh
 chmod +x install_nginx.sh
 
 #Call subscripts, parameter disables 'apt update' command from running with each subscript
-./install_essentials.sh no
-./install_fish.sh no
-./install_firewall.sh no
-./install_nginx.sh no
+#Uncomment the scripts you want to run
+#./install_essentials.sh no
+#./install_fish.sh no
+#./install_firewall.sh no
+#./install_nginx.sh no
 
 echo "Updating database for locate..."
 updatedb
