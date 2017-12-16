@@ -24,6 +24,9 @@ chmod +x install_nginx.sh
 echo "Updating database for locate..."
 updatedb
 
+cd ..
+rm -r LinuxSetupScripts/
+
 echo ""
 echo "################################################"
 echo "# Setup complete, please log out and back in   #"
