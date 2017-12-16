@@ -29,22 +29,5 @@ echo "set -U fish_prompt_pwd_dir_length 0" | tee -a ~/.config/fish/config.fish
 #Make fish show full paths in newer versions
 mkdir -p ~/.config/fish/functions
 
-
-touch ~/.config/fish/functions/fish_title.fish
-
-echo 'function fish_title
-    hostname
-    echo ' - ' $_
-end' | tee ~/.config/fish/functions/fish_title.fish
-
-
-
-touch ~/.config/fish/functions/prompt_pwd.fish
-
-echo 'function prompt_pwd
-    if test  \"$PWD\" != \"$HOME\"
-        printf \"%s\" (echo $PWD|sed -e \"s|/private||\" -e \"s|^$HOME|~|\")
-    else
-        echo '~'
-    end
-end' | tee ~/.config/fish/functions/prompt_pwd.fish 
+cp fish_config/fish_title.fish ~/.config/fish/functions/fish_title.fish
+cp fish_config/prompt_pwd.fish ~/.config/fish/functions/prompt_pwd.fish 
