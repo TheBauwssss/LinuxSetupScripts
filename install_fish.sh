@@ -1,8 +1,12 @@
 #!/bin/bash
 
-echo "Instaling Fish, related tools and configs..."
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied! Updating apt..."
+	apt update
+fi
 
-apt update
+echo "Instaling Fish, related tools and configs..."
 
 apt install fish python3-dev python3-pip -y
 
