@@ -17,7 +17,7 @@ chmod +x install_nginx.sh
 #Call subscripts, parameter disables 'apt update' command from running with each subscript
 #Uncomment the scripts you want to run
 #./install_essentials.sh no
-#./install_fish.sh no
+#DO NOT USE, BUGGY!! ./install_fish.sh no
 #./install_firewall.sh no
 #./install_nginx.sh no
 
