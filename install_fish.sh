@@ -32,19 +32,19 @@ mkdir -p ~/.config/fish/functions
 
 touch ~/.config/fish/functions/fish_title.fish
 
-echo "function fish_title
+echo 'function fish_title
     hostname
     echo ' - ' $_
-end" | tee ~/.config/fish/functions/fish_title.fish
+end' | tee ~/.config/fish/functions/fish_title.fish
 
 
 
 touch ~/.config/fish/functions/prompt_pwd.fish
 
-echo "function prompt_pwd --description 'Print the current working directory, NOT shortened to fit the prompt'
+echo 'function prompt_pwd
     if test  \"$PWD\" != \"$HOME\"
-        printf \"%s\" (echo $PWD|sed -e 's|/private||' -e \"s|^$HOME|~|\")
+        printf \"%s\" (echo $PWD|sed -e \"s|/private||\" -e \"s|^$HOME|~|\")
     else
         echo '~'
     end
-end" | tee ~/.config/fish/functions/prompt_pwd.fish 
+end' | tee ~/.config/fish/functions/prompt_pwd.fish 
