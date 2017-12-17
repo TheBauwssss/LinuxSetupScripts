@@ -9,7 +9,7 @@ apt update
 echo "Upgrading packages..."
 apt upgrade -y
 
-chmod +x install_essentials
+chmod +x install_essentials.sh
 chmod +x install_fish.sh
 chmod +x install_firewall.sh
 chmod +x install_nginx.sh
