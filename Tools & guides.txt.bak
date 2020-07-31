@@ -1,0 +1,27 @@
+Plex HW acceleration in LXC container - Installation guide
+
+https://forums.plex.tv/t/plex-hw-acceleration-in-lxc-container-anyone-with-success/219289/7
+
+list all installed desktop Environments (in Ubuntu)
+
+$> ls -l /usr/share/xsessions/
+
+https://askubuntu.com/questions/347063/list-all-installed-desktop-environments-in-ubuntu
+
+Install KDE (Plasma) Desktop Manager (on Ubuntu 18.04):
+
+https://www.techrepublic.com/blog/diy-it-guy/diy-replace-ubuntu-unity-with-a-different-desktop/
+
+OR
+
+https://vitux.com/how-to-install-the-kde-plasma-desktop-on-ubuntu-18-04-lts/
+
+Install Gnome 3 Desktop Manager (in Ubuntu):
+
+https://askubuntu.com/questions/829108/what-is-gdm3-kdm-lightdm-how-to-install-and-remove-them
+
+Create physical hdd file for use with virtual box. Run this command in cmd.exe window with admin rights whilst cd'ed into the VirtualBox program files folder, usually "C:\Program Files\Oracle\VirtualBox":
+
+VBoxManage internalcommands createrawvmdk -filename "C:\Users\<user_name>\VirtualBox VMs\<VM_folder_name>\<file_name>.vmdk" -rawdisk \\.\PhysicalDrive#
+
+#source: https://www.serverwatch.com/server-tutorials/using-a-physical-hard-drive-with-a-virtualbox-vm.html

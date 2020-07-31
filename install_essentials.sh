@@ -8,7 +8,7 @@ fi
 
 echo "Installing essentials..."
 
-apt install htop locate nano unzip screen tree -y
+apt install htop locate nano unzip zip screen tree git curl ncdu -y
 
 echo ""
 echo "Enabling ssh root login with password..."

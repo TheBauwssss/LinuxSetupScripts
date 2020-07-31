@@ -1,0 +1,19 @@
+#
+# NOTE: If IP assignments do not work, check pfSense static mappings first before spending
+# HOURS AND HOURS trying different ways to set a static ip.
+#
+
+# Static ip on Debian 9 Stretch:
+
+$ nano /etc/dhcpcd.conf
+
+#at the bottom type the following text:
+
+interface eth0
+static ip_address=192.168.100.233/24	
+static routers=192.168.100.1
+static domain_name_servers=192.168.100.1
+
+#check temperature and voltage state (0x0 = no under voltage)
+
+vcgencmd measure_temp && vcgencmd get_throttled

@@ -1,19 +1,5 @@
 #!/bin/bash
 
-#Mysql guides
-#How To Install MySQL on Ubuntu 16.04: https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-16-04
-#Uninstalling MySQL: https://help.cloud66.com/maestro/how-to-guides/databases/shells/uninstall-mysql.html
-#Reset a MySQL root password: https://support.rackspace.com/how-to/mysql-resetting-a-lost-mysql-root-password/
-#Make MySQL listen on other interfaces: https://www.garron.me/en/bits/mysql-bind-all-address.html
-
-#Wordpress guides
-#How to install Wordpress: https://tecadmin.net/install-wordpress-with-nginx-on-ubuntu/
-
-#Security guides
-#How to setup fail2ban: https://www.linode.com/docs/security/using-fail2ban-for-security/#configure-fail2ban-local
-
-service --status-all #view all services
-
 #Uninstall unused crap, LET OP: packages worden niet correct verwijders, deze commandos handmatig uitvoeren!
 apt purge --auto-remove apache2* -y
 apt purge --auto-remove postfix -y
@@ -21,12 +7,9 @@ apt purge --auto-remove rsyslog -y
 
 apt update
 apt upgrade -y
-apt install software-properties-common htop locate nano unzip zip screen tree git curl fail2ban ncdu -y
+apt install software-properties-common htop locate nano unzip zip screen tree git ncdu -y
 
 add-apt-repository ppa:fish-shell/release-2
-# 
-# Fix unicode locale errors when installing certificates by putting LC_ALL=C.UTF-8 before the command in !!BASH!!
-# 
 apt update
 apt install fish -y
 
@@ -49,13 +32,6 @@ add-apt-repository ppa:ondrej/php
 #apt-add-repository ppa:ondrej/nginx-mainline
 apt update
 apt upgrade -y
-
-#FIX NGINX SIGNING KEY
-    wget http://nginx.org/packages/keys/nginx_signing.key
-    cat nginx_signing.key | sudo apt-key add - 
-    apt-get update
-    apt-get install nginx
-#END FIX
 
 #Install new php version
 apt install nginx php7.2 php7.2-cli php7.2-common php7.2-json php7.2-opcache php7.2-readline -y

@@ -1,0 +1,25 @@
+Install KDE Plasma Desktop Manager: https://www.techrepublic.com/blog/diy-it-guy/diy-replace-ubuntu-unity-with-a-different-desktop/
+
+Follow this guide:
+
+https://www.hiroom2.com/2018/05/07/ubuntu-1804-xrdp-kde-en/
+
+then, before trying to login, make this change (or ensure the variable is set to the correct value): 
+
+https://www.linuxquestions.org/questions/linux-software-2/xrdp-under-debian-9-connection-problem-4175623357/#post5817508
+
+OR
+
+https://askubuntu.com/a/1080022
+
+reboot the server, then endure service xrdp is active and allowed in firewall then attempt to connection-problem-4175623357/#post5817508
+everything should work! Also ensure kde plasma desktop environment is installed (window manager is something different)!!!!!!
+
+
+TWEAKS:
+
+https://askubuntu.com/questions/133343/how-do-i-set-up-xrdp-session-that-reuses-an-existing-session
+
+
+
+

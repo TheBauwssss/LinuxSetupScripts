@@ -1,0 +1,33 @@
+https://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature
+
+A good indicator for monitoring temperature, fan speeds and voltage is psensor. It shows output of all sensors, draws graphs. Also selected outputs can be placed in indicator panel.
+
+It can be installed from Ubuntu repositories by typing:
+
+$> sudo apt-get install psensor
+
+Newer versions of psensor can be installed from ppa:
+
+$> sudo add-apt-repository ppa:jfi/ppa
+$> sudo apt-get update
+$> sudo apt-get install psensor
+
+In some cases not all sensors are displayed. Then you can run
+
+$> sudo sensors-detect
+
+and answer "yes" to all questions. But is not quite safe in some cases, but I never had any real problems with that. A safer way is to take default answers.
+
+Some additional sensors may appear.
+
+Info + pictures: http://www.webupd8.org/2014/06/psensor-updated-with-option-to-display.html
+See also: http://www.webupd8.org/2012/07/monitor-hardware-temperature-in-ubuntu.html
+
+Sick tool for rainmeter like functionality: https://github.com/brndnmtthws/conky/wiki/Configs
+Beautiful conky theme: https://github.com/pascalwhoop/conky.conf (epic screenshot: https://github.com/pascalwhoop/conky.conf/blob/master/screenshot.png)
+
+Sick theme for KDE Plasma desktop: https://store.kde.org/p/1281836 "Aritim-Dark Look-and-Feel Theme "
+
+View all drives and used/total disk space:
+
+$> df -h
